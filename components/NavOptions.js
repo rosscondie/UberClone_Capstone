@@ -1,5 +1,5 @@
-import { Text, View } from 'react-native';
 import React from 'react';
+import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import CAR from '../assets/uber_taxi.webp';
 import FOOD from '../assets/uber_food.jpeg';
 
@@ -20,9 +20,15 @@ const data = [
 
 const NavOptions = () => {
   return (
-    <View>
-      <Text>NavOptions</Text>
-    </View>
+    <FlatList
+      data={data}
+      horizontal
+      renderItem={({ item }) => (
+        <TouchableOpacity>
+          <Text>{item.title}</Text>
+        </TouchableOpacity>
+      )}
+    />
   );
 };
 
