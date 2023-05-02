@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import React from 'react';
+import tw from 'twrnc';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={tw`bg-white h-full`}>
       <Text>HomeScreen</Text>
     </SafeAreaView>
   );
