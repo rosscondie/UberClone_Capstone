@@ -9,7 +9,7 @@ export default function App() {
     </View>
   );
 }
-
+// in react native flexbox defaults to a column
 const styles = StyleSheet.create({
   container: {
     flex: 1,
