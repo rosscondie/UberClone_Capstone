@@ -1,11 +1,19 @@
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import React from 'react';
 import tw from 'twrnc';
+import LOGO from '../assets/uber_logo.png';
 
 const HomeScreen = () => {
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
-      <Text>HomeScreen</Text>
+      <View>
+        <Image
+          style={{ width: 100, height: 100, resizeMode: 'contain' }}
+          source={{
+            uri: { LOGO },
+          }}
+        />
+      </View>
     </SafeAreaView>
   );
 };
