@@ -1,20 +1,21 @@
 import React from 'react';
-import { FlatList, Text, TouchableOpacity, View } from 'react-native';
-import CAR from '../assets/uber_taxi.webp';
-import FOOD from '../assets/uber_food.jpeg';
+import { FlatList, Text, TouchableOpacity, View, Image } from 'react-native';
+import CAR from '../assets/uber_taxi.png';
+import FOOD from '../assets/uber_food.png';
+import tw from 'twrnc';
 
 const data = [
   {
     id: '123',
     title: 'Get a ride',
-    image: { CAR },
+    image: CAR,
     screen: 'MapScreen',
   },
   {
     id: '456',
     title: 'Order food',
-    image: { FOOD },
-    screen: 'EatsScreen', // Change in future...
+    image: FOOD,
+    screen: 'EatsScreen', // Possible extension for the future...
   },
 ];
 
@@ -25,8 +26,14 @@ const NavOptions = () => {
       horizontal
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
-        <TouchableOpacity>
-          <Text>{item.title}</Text>
+        <TouchableOpacity style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}>
+          <View>
+            <Image
+              style={{ width: 100, height: 100, resizeMode: 'contain' }}
+              source={item.image}
+            />
+            <Text>{item.title}</Text>
+          </View>
         </TouchableOpacity>
       )}
     />
