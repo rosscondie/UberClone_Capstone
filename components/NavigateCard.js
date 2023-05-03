@@ -1,4 +1,10 @@
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import tw from 'twrnc';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
@@ -7,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import { setDestination } from '../slices/navSlice';
 import { useNavigation } from '@react-navigation/native';
 import NavFavourites from './NavFavourites';
+import { Icon } from 'react-native-elements';
 
 const NavigateCard = () => {
   const dispatch = useDispatch(); // useDispatch is a hook
