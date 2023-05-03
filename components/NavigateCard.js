@@ -5,7 +5,9 @@ import tw from 'twrnc';
 const NavigateCard = () => {
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
-      <Text>NavigateCard</Text>
+      <Text style={tw`text-center py-5 text-xl font-semibold`}>
+        Good Morning CodeClan
+      </Text>
     </SafeAreaView>
   );
 };
