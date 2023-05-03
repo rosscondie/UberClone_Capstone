@@ -32,7 +32,7 @@ const NavOptions = () => {
               style={{ width: 100, height: 100, resizeMode: 'contain' }}
               source={item.image}
             />
-            <Text>{item.title}</Text>
+            <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
           </View>
         </TouchableOpacity>
       )}
