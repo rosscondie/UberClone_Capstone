@@ -4,6 +4,7 @@ import CAR from '../assets/uber_taxi.png';
 import FOOD from '../assets/uber_food.png';
 import tw from 'twrnc';
 import { Icon } from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
 
 const data = [
   {
@@ -21,13 +22,17 @@ const data = [
 ];
 
 const NavOptions = () => {
+  const navigation = useNavigation();
   return (
     <FlatList
       data={data}
       horizontal
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
-        <TouchableOpacity style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate(item.screen)}
+          style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}
+        >
           <View>
             <Image
               style={{ width: 100, height: 100, resizeMode: 'contain' }}
