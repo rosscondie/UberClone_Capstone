@@ -30,10 +30,11 @@ const NavFavourites = () => {
       data={data}
       keyExtractor={(item) => item.id}
       renderItem={({ item: { location, destination, icon } }) => (
-        <TouchableOpacity>
+        <TouchableOpacity style={tw`flex-row items-center p-5`}>
           <Icon
             style={tw`mr-4 rounded-full bg-gray-300 p-3`}
             name={icon}
+            type="ionicon"
             color="white"
             size={18}
           />
