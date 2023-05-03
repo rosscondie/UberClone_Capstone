@@ -3,6 +3,7 @@ import { FlatList, Text, TouchableOpacity, View, Image } from 'react-native';
 import CAR from '../assets/uber_taxi.png';
 import FOOD from '../assets/uber_food.png';
 import tw from 'twrnc';
+import { Icon } from 'react-native-elements';
 
 const data = [
   {
@@ -33,6 +34,7 @@ const NavOptions = () => {
               source={item.image}
             />
             <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
+            <Icon name="arrowright" color="white" type="antdesign" />
           </View>
         </TouchableOpacity>
       )}
