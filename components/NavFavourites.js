@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import tw from 'twrnc';
+import { Icon } from 'react-native-elements';
 
 const data = [
   {
