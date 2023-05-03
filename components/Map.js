@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import MapView, { Marker } from 'react-native-maps';
 import tw from 'twrnc';
 import { useSelector } from 'react-redux';
@@ -10,6 +10,14 @@ import { GOOGLE_MAPS_APIKEY } from '@env';
 const Map = () => {
   const origin = useSelector(selectOrigin);
   const destination = useSelector(selectDestination);
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    if (!origin || !destination) return;
+
+    // This zooms and fits to both of the markers
+    mapRef.current.fitToSuppliedMaerkers(['origin', 'destination']);
+  }, [origin, destination]);
 
   return (
     <MapView
@@ -40,6 +48,18 @@ const Map = () => {
           title="You are here"
           description={origin.description}
           identifier="origin"
+        />
+      )}
+
+      {destination?.location && (
+        <Marker
+          coordinate={{
+            latitude: destination.location.lat,
+            longitude: destination.location.lng,
+          }}
+          title="Destination"
+          description={destination.description}
+          identifier="destination"
         />
       )}
     </MapView>
