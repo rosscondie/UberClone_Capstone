@@ -38,6 +38,10 @@ const NavFavourites = () => {
             color="white"
             size={18}
           />
+          <View>
+            <Text>{location}</Text>
+            <Text>{destination}</Text>
+          </View>
         </TouchableOpacity>
       )}
     />
