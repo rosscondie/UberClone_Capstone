@@ -66,10 +66,11 @@ const RideOptionsCard = () => {
               }}
               source={image}
             />
-            <View>
+            <View style={tw`-ml-6`}>
               <Text>{title}</Text>
               <Text>Travel time...</Text>
             </View>
+            <Text style={tw`text-xl`}>£99</Text>
           </TouchableOpacity>
         )}
       />
