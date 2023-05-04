@@ -6,9 +6,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import NavigateCard from '../components/NavigateCard';
 import RideOptionsCard from '../components/RideOptionsCard';
 import { Icon } from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
 
 const MapScreen = () => {
   const Stack = createNativeStackNavigator();
+  const navigation = useNavigation();
 
   return (
     <View>
