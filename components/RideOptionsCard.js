@@ -1,19 +1,21 @@
+import React, { useState } from 'react';
 import {
-  FlatList,
+  Image,
   StyleSheet,
+  SafeAreaView,
   Text,
   TouchableOpacity,
   View,
-  Image,
-  SafeAreaView,
+  FlatList,
 } from 'react-native';
-import React, { useState } from 'react';
 import tw from 'twrnc';
 import { Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 import UberX from '../assets/UberX.webp';
 import UberXL from '../assets/UberXL.webp';
 import UberLux from '../assets/UberLux.webp';
+import { useSelector } from 'react-redux';
+import { selectTravelTimeInformation } from '../slices/navSlice';
 
 const data = [
   {
@@ -39,6 +41,7 @@ const data = [
 const RideOptionsCard = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
+  const travelTimeInformation = useSelector(selectTravelTimeInformation);
 
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
@@ -50,7 +53,7 @@ const RideOptionsCard = () => {
           <Icon name="chevron-left" type="fontawesome" />
         </TouchableOpacity>
         <Text style={tw`font-semibold text-center py-5 text-xl`}>
-          Select a ride
+          Select a Ride - {travelTimeInformation?.distance?.text}
         </Text>
       </View>
 
@@ -74,7 +77,7 @@ const RideOptionsCard = () => {
             />
             <View style={tw`-ml-6`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
-              <Text>Travel time...</Text>
+              <Text>{travelTimeInformation?.duration?.text} Travel Time</Text>
             </View>
             <Text style={tw`text-xl`}>£99</Text>
           </TouchableOpacity>
