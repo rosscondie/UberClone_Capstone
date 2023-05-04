@@ -50,7 +50,15 @@ const RideOptionsCard = () => {
         <Text style={tw`text-center py-5 text-xl`}>Select a ride</Text>
       </View>
 
-      <FlatList />
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <TouchableOpacity>
+            <Text>Car</Text>
+          </TouchableOpacity>
+        )}
+      />
     </SafeAreaView>
   );
 };
