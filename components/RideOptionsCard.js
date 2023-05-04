@@ -7,7 +7,7 @@ import {
   Image,
   SafeAreaView,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import tw from 'twrnc';
 import { Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
@@ -38,6 +38,7 @@ const data = [
 
 const RideOptionsCard = () => {
   const navigation = useNavigation();
+  const [selected, setSelected] = useState(null);
 
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
