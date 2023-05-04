@@ -5,9 +5,9 @@ import {
   TouchableOpacity,
   View,
   Image,
+  SafeAreaView,
 } from 'react-native';
 import React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import tw from 'twrnc';
 import { Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
@@ -64,6 +64,10 @@ const RideOptionsCard = () => {
               }}
               source={image}
             />
+            <View>
+              <Text>{title}</Text>
+              <Text>Travel time...</Text>
+            </View>
           </TouchableOpacity>
         )}
       />
