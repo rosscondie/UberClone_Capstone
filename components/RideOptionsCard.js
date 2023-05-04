@@ -48,7 +48,9 @@ const RideOptionsCard = () => {
         >
           <Icon name="chevron-left" type="fontawesome" />
         </TouchableOpacity>
-        <Text style={tw`text-center py-5 text-xl`}>Select a ride</Text>
+        <Text style={tw`font-semibold text-center py-5 text-xl`}>
+          Select a ride
+        </Text>
       </View>
 
       <FlatList
@@ -67,7 +69,7 @@ const RideOptionsCard = () => {
               source={image}
             />
             <View style={tw`-ml-6`}>
-              <Text>{title}</Text>
+              <Text style={tw`text-xl font-semibold`}>{title}</Text>
               <Text>Travel time...</Text>
             </View>
             <Text style={tw`text-xl`}>£99</Text>
