@@ -96,7 +96,7 @@ const RideOptionsCard = () => {
         )}
       />
 
-      <View>
+      <View style={tw`mt-auto border-t border-t border-gray-200`}>
         <TouchableOpacity
           disbaled={!selected}
           style={tw.style`bg-black py-3 m-3 ${!selected && 'bg-gray-300'}`}
