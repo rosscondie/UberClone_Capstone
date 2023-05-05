@@ -79,7 +79,9 @@ const RideOptionsCard = () => {
             />
             <View style={tw`-ml-6`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
-              <Text>{travelTimeInformation?.duration?.text} Travel Time</Text>
+              <Text style={tw`p-2`}>
+                {travelTimeInformation?.duration?.text} Travel Time
+              </Text>
             </View>
             <Text style={tw`text-xl`}>
               {new Intl.NumberFormat('en-gb', {
