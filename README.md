@@ -21,3 +21,4 @@
 - Rate Driver out of 5 stars.
 - Add & Save Addresses to profile.
 - Authentication to log into the app.
+- Expand on UberEats screen.
