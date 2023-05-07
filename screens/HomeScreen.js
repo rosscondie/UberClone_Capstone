@@ -19,6 +19,7 @@ const HomeScreen = () => {
 
   const setAddressText = (text) => {
     ref.current?.setAddressText(text);
+    ref.current?.focus();
   };
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
