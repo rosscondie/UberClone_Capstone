@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import tw from 'twrnc';
 import LOGO from '../assets/uber_logo.png';
 import NavOptions from '../components/NavOptions';
@@ -11,6 +11,15 @@ import NavFavourites from '../components/NavFavourites';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current?.setAddressText('');
+  }, []);
+
+  const setAddressText = (text) => {
+    ref.current?.setAddressText(text);
+  };
   return (
     <SafeAreaView style={tw`bg-white h-full`}>
       <View style={tw`p-5`}>
@@ -19,6 +28,7 @@ const HomeScreen = () => {
           source={LOGO}
         />
         <GooglePlacesAutocomplete
+          ref={ref}
           placeholder="Where From?"
           styles={{
             container: {
@@ -51,7 +61,7 @@ const HomeScreen = () => {
         />
 
         <NavOptions />
-        <NavFavourites />
+        <NavFavourites setAddressText={setAddressText} />
       </View>
     </SafeAreaView>
   );
