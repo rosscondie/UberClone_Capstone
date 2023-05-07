@@ -15,7 +15,7 @@ import { useNavigation } from '@react-navigation/native';
 import NavFavourites from './NavFavourites';
 import { Icon } from 'react-native-elements';
 
-const NavigateCard = () => {
+const NavigateCard = ({ setAddressText }) => {
   const dispatch = useDispatch(); // useDispatch is a hook
   const navigation = useNavigation();
   return (
