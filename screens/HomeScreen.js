@@ -23,10 +23,6 @@ const HomeScreen = () => {
   const dispatch = useDispatch();
   const ref = useRef();
 
-  useEffect(() => {
-    ref.current?.setAddressText('');
-  }, []);
-
   const setAddressText = (text) => {
     ref.current?.setAddressText(text);
     ref.current?.focus();
