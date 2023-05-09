@@ -7,6 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MapScreen from './screens/MapScreen';
+import TipIncentiveScreen from './screens/TipIncentiveScreen';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -29,12 +30,20 @@ export default function App() {
                 headerShown: false,
               }}
             />
+            <Stack.Screen
+              name="TipIncentiveScreen"
+              component={TipIncentiveScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
           </Stack.Navigator>
         </SafeAreaProvider>
       </NavigationContainer>
     </Provider>
   );
 }
+
 // in react native flexbox defaults to a column
 const styles = StyleSheet.create({
   container: {
