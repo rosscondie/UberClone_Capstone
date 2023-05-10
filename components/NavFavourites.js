@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   FlatList,
   StyleSheet,
@@ -24,7 +23,7 @@ const data = [
   },
 ];
 
-const NavFavourites = () => {
+const NavFavourites = ({ setAddressText }) => {
   return (
     <FlatList
       data={data}
@@ -33,7 +32,12 @@ const NavFavourites = () => {
         <View style={[tw`bg-gray-200`, { height: 0.5 }]} />
       )}
       renderItem={({ item: { location, destination, icon } }) => (
-        <TouchableOpacity style={tw`flex-row items-center p-5`}>
+        <TouchableOpacity
+          style={tw`flex-row items-center p-5`}
+          onPress={() => {
+            setAddressText(destination);
+          }}
+        >
           <Icon
             style={tw`mr-4 rounded-full bg-gray-300 p-3`}
             name={icon}
