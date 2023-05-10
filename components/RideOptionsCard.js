@@ -16,6 +16,7 @@ import UberXL from '../assets/UberXL.webp';
 import UberLux from '../assets/UberLux.webp';
 import { useSelector } from 'react-redux';
 import { selectTravelTimeInformation } from '../slices/navSlice';
+import TipIncentiveScreen from '../screens/TipIncentiveScreen';
 
 const data = [
   {
@@ -44,6 +45,16 @@ const RideOptionsCard = () => {
   const navigation = useNavigation();
   const [selected, setSelected] = useState(null);
   const travelTimeInformation = useSelector(selectTravelTimeInformation);
+
+  const onPressChooseRideHandler = () => {
+    navigation.navigate('TipIncentiveScreen', {
+      rideCost:
+        (travelTimeInformation?.duration?.value *
+          SURGE_CHARGE_RATE *
+          selected.multiplier) /
+        100,
+    });
+  };
 
   return (
     <SafeAreaView style={tw`bg-white flex-grow`}>
@@ -100,7 +111,8 @@ const RideOptionsCard = () => {
 
       <View style={tw`mt-auto border-t border-t border-gray-200`}>
         <TouchableOpacity
-          disbaled={!selected}
+          disabled={!selected}
+          onPress={onPressChooseRideHandler}
           style={tw.style`bg-black py-3 m-3 ${!selected && 'bg-gray-300'}`}
         >
           <Text style={tw`text-center text-white text-xl`}>
