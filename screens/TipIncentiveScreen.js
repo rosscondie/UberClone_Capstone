@@ -10,6 +10,7 @@ import {
 import { MaterialIcons } from '@expo/vector-icons';
 import tw from 'twrnc';
 import money_hand from '../assets/money_hand.gif';
+import { Icon } from 'react-native-elements';
 
 const TipIncentiveScreen = ({ navigation, route }) => {
   const [selectedTip, setSelectedTip] = useState(
@@ -48,9 +49,17 @@ const TipIncentiveScreen = ({ navigation, route }) => {
 
   return (
     <SafeAreaView style={tw`flex-1 bg-white p-5`}>
-      <Text style={tw`text-center text-lg font-bold text-black`}>
-        Choose Tip Amount
-      </Text>
+      <View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('RideOptionsCard')}
+          style={tw`absolute left-5 z-50 p-0.5 rounded-full`}
+        >
+          <Icon name="chevron-left" type="fontawesome" />
+        </TouchableOpacity>
+        <Text style={tw`text-center text-lg font-bold text-black`}>
+          Choose Tip Amount
+        </Text>
+      </View>
       <View style={tw`flex-row mt-5 justify-center `}>
         <TouchableOpacity
           onPress={() => handleTipSelection(10)}
@@ -157,7 +166,7 @@ const TipIncentiveScreen = ({ navigation, route }) => {
         </Text>
       </View>
       <TouchableOpacity
-        onPress={handleTotalAmount}
+        // onPress={handleTotalAmount}
         style={tw`bg-black py-3 m-3 rounded-2xl`}
       >
         <Text style={tw`text-center text-xl text-white`}>Get a Ride</Text>
