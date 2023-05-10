@@ -5,7 +5,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
+import React, { useRef } from 'react';
 import tw from 'twrnc';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import { GOOGLE_MAPS_APIKEY } from '@env';
@@ -15,9 +15,15 @@ import { useNavigation } from '@react-navigation/native';
 import NavFavourites from './NavFavourites';
 import { Icon } from 'react-native-elements';
 
-const NavigateCard = ({ setAddressText }) => {
+const NavigateCard = () => {
   const dispatch = useDispatch(); // useDispatch is a hook
   const navigation = useNavigation();
+  const ref = useRef();
+
+  const setAddressText = (text) => {
+    ref.current?.setAddressText(text);
+    ref.current?.focus();
+  };
   return (
     <SafeAreaView style={tw`bg-white flex-1`}>
       <Text style={tw`text-center py-5 text-xl font-semibold`}>
@@ -26,6 +32,7 @@ const NavigateCard = ({ setAddressText }) => {
       <View style={tw`border-t border-gray-200 flex-shrink`}>
         <View>
           <GooglePlacesAutocomplete
+            ref={ref}
             styles={inputBoxStyles} // can't use tailwind because we need to override default styles in component
             fetchDetails={true}
             returnKeyType={'search'}
@@ -50,7 +57,7 @@ const NavigateCard = ({ setAddressText }) => {
           />
         </View>
 
-        <NavFavourites />
+        <NavFavourites setAddressText={setAddressText} />
       </View>
 
       <View
