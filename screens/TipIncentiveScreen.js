@@ -60,7 +60,7 @@ const TipIncentiveScreen = ({ navigation, route }) => {
           Choose Tip Amount
         </Text>
       </View>
-      <View style={tw`flex-row mt-5 justify-center `}>
+      <View style={tw`flex-row mt-3 justify-center `}>
         <TouchableOpacity
           onPress={() => handleTipSelection(10)}
           style={tw`flex-row items-center mr-4`}
@@ -131,23 +131,26 @@ const TipIncentiveScreen = ({ navigation, route }) => {
 
       <View style={tw`items-center`}>
         <Image
-          style={{ width: 400, height: 400, resizeMode: 'contain' }}
+          style={{ width: 350, height: 350, resizeMode: 'contain' }}
           source={money_hand}
         />
       </View>
 
-      <View style={tw`p-3 mt-8`}>
-        <Text style={tw`text-center text-lg font-bold text-black`}>
+      <View style={tw`p-3`}>
+        <Text style={tw`text-center text-lg font-bold text-black mb-2`}>
           Custom Tip Amount
         </Text>
+
         <TextInput
-          placeholder="Enter amount"
           keyboardType="numeric"
+          returnKeyType="done"
+          placeholder="Enter amount"
           style={tw`text-center  bg-gray-200 py-3 m-3 rounded-lg`}
           onChangeText={(value) => handleTipInput(value)}
         />
       </View>
-      <View style={tw`p-3 flex-row justify-between`}>
+
+      <View style={tw`p-3 flex-row justify-between mt-5`}>
         <Text style={tw`text-lg font-bold text-black`}>Tip Amount:</Text>
         <Text style={tw`text-lg font-medium text-black`}>
           {new Intl.NumberFormat('en-gb', {
@@ -165,12 +168,14 @@ const TipIncentiveScreen = ({ navigation, route }) => {
           }).format(totalAmount)}
         </Text>
       </View>
-      <TouchableOpacity
-        // onPress={handleTotalAmount}
-        style={tw`bg-black py-3 m-3 rounded-2xl`}
-      >
-        <Text style={tw`text-center text-xl text-white`}>Get a Ride</Text>
-      </TouchableOpacity>
+      <View style={tw`mt-15`}>
+        <TouchableOpacity
+          // onPress={handleTotalAmount}
+          style={tw`bg-black py-3 m-3 rounded-2xl`}
+        >
+          <Text style={tw`text-center text-xl text-white`}>Get a Ride</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
