@@ -5,9 +5,11 @@ import {
   TouchableOpacity,
   TextInput,
   SafeAreaView,
+  Image,
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import tw from 'twrnc';
+import money_hand from '../assets/money_hand.gif';
 
 const TipIncentiveScreen = ({ navigation, route }) => {
   const [selectedTip, setSelectedTip] = useState(
@@ -134,6 +136,14 @@ const TipIncentiveScreen = ({ navigation, route }) => {
           </Text>
         </TouchableOpacity>
       </View>
+
+      <View style={tw`items-center`}>
+        <Image
+          style={{ width: 400, height: 400, resizeMode: 'contain' }}
+          source={money_hand}
+        />
+      </View>
+
       <View style={tw`p-3 mt-8`}>
         <Text style={tw`text-center text-lg font-bold text-black`}>
           Custom Tip Amount
