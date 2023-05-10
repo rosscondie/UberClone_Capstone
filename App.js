@@ -13,7 +13,11 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MapScreen from './screens/MapScreen';
+
+import EatsScreen from './screens/EatsScreen';
+
 import TipIncentiveScreen from './screens/TipIncentiveScreen';
+
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -21,6 +25,9 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <SafeAreaProvider>
+            
+  
+
           <KeyboardAvoidingView
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             style={{ flex: 1 }}
@@ -42,6 +49,13 @@ export default function App() {
                 }}
               />
               <Stack.Screen
+              name="EatsScreen"
+              component={EatsScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
+              <Stack.Screen
                 name="TipIncentiveScreen"
                 component={TipIncentiveScreen}
                 options={{
@@ -50,6 +64,7 @@ export default function App() {
               />
             </Stack.Navigator>
           </KeyboardAvoidingView>
+
         </SafeAreaProvider>
       </NavigationContainer>
     </Provider>
