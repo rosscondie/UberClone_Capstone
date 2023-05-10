@@ -24,14 +24,6 @@ const TipIncentiveScreen = ({ navigation, route }) => {
     setTipAmount(rideCost * (percentage / 100));
     setTotalAmount(rideCost + rideCost * (percentage / 100));
   };
-
-  // const handleTipInput = (amount) => {
-  //   setSelectedTip(0);
-  //   const rideCost = route.params?.rideCost || 0;
-  //   setTipAmount(parseFloat(amount));
-  //   setTotalAmount(rideCost + parseFloat(amount));
-  // };
-
   const handleTipInput = (value) => {
     if (value === '') {
       setTipAmount('');
@@ -44,15 +36,6 @@ const TipIncentiveScreen = ({ navigation, route }) => {
       setTotalAmount(totalAmount);
     }
   };
-
-  //   const handleTotalAmount = () => {
-  //     const rideCost = route.params?.rideCost || 0;
-  //     if (tipAmount && !isNaN(parseFloat(tipAmount))) {
-  //       setTotalAmount(rideCost + parseFloat(tipAmount));
-  //     } else {
-  //       setTotalAmount(rideCost);
-  //     }
-  //   };
 
   const handleTotalAmount = () => {
     const rideCost = route.params?.rideCost || 0;
@@ -173,12 +156,6 @@ const TipIncentiveScreen = ({ navigation, route }) => {
           }).format(totalAmount)}
         </Text>
       </View>
-      {/* <TouchableOpacity
-        onPress={() => handleTotalAmount()}
-        style={tw`bg-white py-3 px-8 mt-8 rounded-lg`}
-      >
-        <Text style={tw`text-lg font-bold`}>Calculate Total</Text>
-      </TouchableOpacity> */}
       <TouchableOpacity
         onPress={handleTotalAmount}
         style={tw`bg-black py-3 m-3 rounded-2xl`}
