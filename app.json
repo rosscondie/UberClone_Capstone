@@ -11,9 +11,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#000000"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.racoder.UberCloneCapstone"
     },
     "android": {
       "adaptiveIcon": {
@@ -23,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8ffa705f-5913-4bc3-b0c1-617a1cb283e8"
+      }
     }
   }
 }
