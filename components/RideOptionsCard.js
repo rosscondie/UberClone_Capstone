@@ -16,7 +16,6 @@ import UberXL from '../assets/UberXL.webp';
 import UberLux from '../assets/UberLux.webp';
 import { useSelector } from 'react-redux';
 import { selectTravelTimeInformation } from '../slices/navSlice';
-import TipIncentiveScreen from '../screens/TipIncentiveScreen';
 
 const data = [
   {
