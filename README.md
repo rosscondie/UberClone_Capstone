@@ -20,14 +20,19 @@ This project was built using:
 
 ### Screenshots
 
-<div align="center">
+<div>
    <span>
     <kbd>
-      <img height="200px" alt="home page view" src="https://www.dropbox.com/s/5m0lhktsnackka2/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-05-14%20at%2010.41.50.png?dl=0">
+      <img height="400px" alt="Home Screen" src="https://github.com/rosscondie/UberClone_Capstone/blob/main/assets/screenshots/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-05-14%20at%2010.41.50.png">
     </kbd>
-     &emsp;&emsp;
     <kbd>
-     <img height="200px" alt="view stocks page view" src="https://www.dropbox.com/s/rdh1bln0frna43n/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-05-14%20at%2010.42.38.png?dl=0">
+     <img height="400px" alt="Map Screen" src="https://github.com/rosscondie/UberClone_Capstone/blob/main/assets/screenshots/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-05-14%20at%2010.42.38.png">
+    </kbd>
+      <kbd>
+     <img height="400px" alt="Tip Screen" src="https://github.com/rosscondie/UberClone_Capstone/blob/main/assets/screenshots/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-05-14%20at%2010.42.58.png">
+    </kbd>
+      <kbd>
+     <img height="400px" alt="Eats Screen" src="https://github.com/rosscondie/UberClone_Capstone/blob/main/assets/screenshots/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-05-14%20at%2010.43.28.png">
     </kbd>
      <span>
  </div>
