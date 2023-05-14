@@ -46,7 +46,7 @@ A user should be able to:
 
 ## Project Setup
 
-You will need Xcode installed to run this on a simulator locally and the Expo app shoud automatically download to the simulator or download the Expo app onto your device from the App store or Play store.
+You will need Xcode installed to run this on a simulator locally and the Expo app should automatically download to the simulator or download the Expo app onto your device from the App store or Play store.
 
 Install the requred node modules:
 
@@ -72,5 +72,6 @@ Start the application:
 ```
 npm start
 ```
+
 You will be offered a QR code to scan with your device if using Expo but if you are using a simulator press 'i' to open.
 
