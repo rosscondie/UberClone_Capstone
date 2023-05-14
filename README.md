@@ -20,6 +20,18 @@ This project was built using:
 
 ### Screenshots
 
+<div align="center">
+   <span>
+    <kbd>
+      <img height="200px" alt="home page view" src="https://www.dropbox.com/s/5m0lhktsnackka2/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-05-14%20at%2010.41.50.png?dl=0">
+    </kbd>
+     &emsp;&emsp;
+    <kbd>
+     <img height="200px" alt="view stocks page view" src="https://www.dropbox.com/s/rdh1bln0frna43n/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20Max%20-%202023-05-14%20at%2010.42.38.png?dl=0">
+    </kbd>
+     <span>
+ </div>
+
 ## Brief
 
 ### Create a similar version of the current Uber Mobile App with modifications to improve the app
